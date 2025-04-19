@@ -1,0 +1,25 @@
+.container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .storeList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .storeItem {
+    padding: 12px;
+    margin: 10px auto;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    transition: 0.2s ease;
+  }
+  
+  .storeItem:hover {
+    background-color: #e6f7ff;
+  }
+  
