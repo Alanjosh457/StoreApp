@@ -1,12 +1,12 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import styles from './OrderConfirmation.module.css'; // Importing the styles
+import styles from './OrderConfirmation.module.css'; 
 
 const OrderConfirmation = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Retrieve user name from location state or default to 'Customer'
+
   const userName = location.state?.name || 'Customer';
 
   return (

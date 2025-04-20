@@ -1,11 +1,11 @@
-// src/App.jsx
+
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import StoreList from './StoreList';
 import ProductList from './ProductList';
 import Cart from './Cart';
 import OrderConfirmation from './OrderConfirmation';
-import './App.css'; // Optional: For layout styles
+import './App.css'; 
 
 const App = () => {
   const [cart, setCart] = useState([]);

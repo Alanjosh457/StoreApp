@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import styles from './ProductList.module.css';
-import { fetchProducts } from './services';  // Import the fetchProducts function
+import { fetchProducts } from './services';  
 
-import res4 from './images/gr4.webp';  // Import the default background image
+import res4 from './images/gr4.webp';  
 
 const ProductList = ({ cart, setCart }) => {
   const [products, setProducts] = useState([]);
   const { storeId } = useParams();
   const navigate = useNavigate();
 
-  // Fetching products based on storeId from the backend using the services function
   useEffect(() => {
     const loadProducts = async () => {
       try {

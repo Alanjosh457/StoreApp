@@ -1,8 +1,8 @@
-// src/Cart.jsx
+
 import React, { useState } from 'react';
 import { placeOrder } from './services';
 import { useNavigate } from 'react-router-dom';
-import styles from './Cart.module.css'; // Import CSS module
+import styles from './Cart.module.css'; 
 
 const Cart = ({ cart, setCart }) => {
   const [name, setName] = useState('');
@@ -31,13 +31,13 @@ const Cart = ({ cart, setCart }) => {
   
     try {
       const res = await placeOrder(name, cart, total);
-      console.log('Order response:', res); // ✅ Debug API response
+      console.log('Order response:', res);
   
-      if (res && res.order) {  // Checking if 'order' exists in the response
+      if (res && res.order) { 
         alert('Order placed successfully!');
         setCart([]);
         setName('');
-        navigate('/confirmation', { state: { name } }); // ✅ Passing user name to confirmation page
+        navigate('/confirmation', { state: { name } }); 
       } else {
         alert('Failed to place order');
       }

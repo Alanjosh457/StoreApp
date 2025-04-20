@@ -8,7 +8,7 @@ import res2 from './images/gr2.jpg';
 import res3 from './images/gr3.png';
 import res4 from './images/gr4.webp';
 
-const storeImages = [res1, res2, res3,res4]; // Add more if you have more stores
+const storeImages = [res1, res2, res3,res4]; 
 
 const StoreList = () => {
   const [stores, setStores] = useState([]);

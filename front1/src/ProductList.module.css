@@ -1,13 +1,13 @@
-/* Main container */
+
 .container {
   background: url('./images/gr4.webp') no-repeat center center fixed;
   background-size: cover;
   padding: 20px;
   text-align: center;
-  height: 100vh;  /* Make it fill the viewport */
+  height: 100vh;  
 }
 
-/* Product card styling */
+
 .productCard {
   background: linear-gradient(135deg, #f0f0ff, #e3f1ff);
   margin: 15px auto;
@@ -29,10 +29,10 @@
   z-index: 1;
 }
 
-/* Button styling */
+
 button {
   padding: 8px 15px;
-  background: linear-gradient(135deg, #8e2de2, #4a00e0); /* Purple-blue gradient */
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
   color: white;
   border: none;
   border-radius: 4px;
@@ -40,19 +40,19 @@ button {
   transition: all 0.3s ease;
   margin-left: 5%;
   font-weight: bold;
-  box-shadow: 0 4px 14px rgba(138, 43, 226, 0.4); /* Optional glow */
+  box-shadow: 0 4px 14px rgba(138, 43, 226, 0.4); 
 }
 
 button:hover {
-  background: linear-gradient(135deg, #4a00e0, #8e2de2); /* Reverse gradient on hover */
+  background: linear-gradient(135deg, #4a00e0, #8e2de2); 
   box-shadow: 0 6px 20px rgba(138, 43, 226, 0.6);
 }
 
 
-/* Overlay styling */
+
 .overlay {
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.6); /* Slight transparency */
+  background-color: rgba(0, 0, 0, 0.6); 
   backdrop-filter: blur(20px);
   padding: 40px 30px;
   border-radius: 18px;
@@ -63,7 +63,7 @@ button:hover {
   margin-top: 5%;
 }
 
-/* Heading with gradient animation */
+
 h1 {
   font-size: 2.8rem;
   text-align: center;
@@ -99,7 +99,7 @@ h1 {
   }
 }
 
-/* Store item list styling */
+
 .storeList {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

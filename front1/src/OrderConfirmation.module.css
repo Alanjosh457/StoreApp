@@ -1,4 +1,4 @@
-/* OrderConfirmation.module.css */
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -17,7 +17,7 @@
   padding: 2.5rem;
   border-radius: 16px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.6); /* More transparent */
+  background-color: rgba(0, 0, 0, 0.6); 
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   animation: fadeIn 0.8s ease-in-out;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,7 +30,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  background: rgba(0, 0, 0, 0.3); 
   z-index: -1;
   border-radius: 16px;
 }
