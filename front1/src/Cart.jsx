@@ -26,16 +26,18 @@ const Cart = ({ cart, setCart }) => {
       alert('Cart is empty.');
       return;
     }
-
+  
     setPlacingOrder(true);
-
+  
     try {
       const res = await placeOrder(name, cart, total);
-      if (res.success) {
+      console.log('Order response:', res); // ✅ Debug API response
+  
+      if (res && res.order) {  // Checking if 'order' exists in the response
         alert('Order placed successfully!');
         setCart([]);
         setName('');
-        navigate('/confirmation');
+        navigate('/confirmation', { state: { name } }); // ✅ Passing user name to confirmation page
       } else {
         alert('Failed to place order');
       }
@@ -46,6 +48,7 @@ const Cart = ({ cart, setCart }) => {
       setPlacingOrder(false);
     }
   };
+  
 
   return (
     <div className={styles.cartSidebar}>
@@ -71,25 +74,29 @@ const Cart = ({ cart, setCart }) => {
         </ul>
       )}
 
-      {cart.length > 0 && (
-        <>
-          <div className={styles.total}>Total: ₹{total}</div>
-          <input
-            type="text"
-            placeholder="Your Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className={styles.nameInput}
-          />
-          <button
-            className={styles.placeOrderBtn}
-            onClick={handlePlaceOrder}
-            disabled={placingOrder}
-          >
-            {placingOrder ? 'Placing Order...' : 'Place Order'}
-          </button>
-        </>
-      )}
+      
+
+
+{cart.length > 0 && (
+  <div className={styles.footerWrapper}>
+    <div className={styles.total}>Total: ₹{total}</div>
+    <input
+      type="text"
+      placeholder="Your Name"
+      value={name}
+      onChange={(e) => setName(e.target.value)}
+      className={styles.nameInput}
+    />
+    <button
+      className={styles.placeOrderBtn}
+      onClick={handlePlaceOrder}
+      disabled={placingOrder}
+    >
+      {placingOrder ? 'Placing Order...' : 'Place Order'}
+    </button>
+  </div>
+)}
+
     </div>
   );
 };

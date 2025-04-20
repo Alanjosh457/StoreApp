@@ -1,31 +1,69 @@
+/* OrderConfirmation.module.css */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .container {
-    padding: 40px;
-    text-align: center;
-    background-color: #e6ffe6;
-    border-radius: 10px;
-    margin: 50px auto;
-    width: 60%;
-  }
-  
-  h2 {
-    color: #2e7d32;
-  }
-  
-  p {
-    font-size: 18px;
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #43a047;
-  }
-  
+  position: relative;
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6); /* More transparent */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.8s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  z-index: -1;
+  border-radius: 16px;
+}
+
+h2 {
+  color: #74fff8;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  animation: fadeIn 0.8s ease-in-out 0.1s backwards;
+}
+
+p {
+  font-size: 1.15rem;
+  color: #60e4ff;
+  margin-bottom: 2.5rem;
+  animation: fadeIn 0.8s ease-in-out 0.2s backwards;
+}
+
+button {
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-in-out 0.3s backwards;
+}
+
+button:hover {
+  background-color: #1b5e20;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

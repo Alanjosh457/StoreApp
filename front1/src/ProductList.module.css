@@ -1,29 +1,176 @@
+/* Main container */
 .container {
-    padding: 20px;
-    text-align: center;
+  background: url('./images/gr4.webp') no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+  height: 100vh;  /* Make it fill the viewport */
+}
+
+/* Product card styling */
+.productCard {
+  background: linear-gradient(135deg, #f0f0ff, #e3f1ff);
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.productCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Button styling */
+button {
+  padding: 8px 15px;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0); /* Purple-blue gradient */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 5%;
+  font-weight: bold;
+  box-shadow: 0 4px 14px rgba(138, 43, 226, 0.4); /* Optional glow */
+}
+
+button:hover {
+  background: linear-gradient(135deg, #4a00e0, #8e2de2); /* Reverse gradient on hover */
+  box-shadow: 0 6px 20px rgba(138, 43, 226, 0.6);
+}
+
+
+/* Overlay styling */
+.overlay {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6); /* Slight transparency */
+  backdrop-filter: blur(20px);
+  padding: 40px 30px;
+  border-radius: 18px;
+  max-width: 980px;
+  margin: 0 auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+/* Heading with gradient animation */
+h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #47d4e7, #7700ff, #e747dc);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeDown 0.6s ease-in-out, shimmer 4s linear infinite;
+  letter-spacing: 1px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
   }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Store item list styling */
+.storeList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.storeItem {
+  list-style: none;
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #39042f, #11084c);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #dce5ef;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #47d4e7;
+}
+
+.storeItem:hover {
+  transform: scale(1.06);
+  box-shadow: 0 14px 30px rgba(120, 37, 168, 0.951);
+  z-index: 1;
+}
+
+.storeItem strong {
+  display: block;
+  font-size: 1.5rem;
+  color: #6ff0ee;
+  font-weight: 700;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.storeItem span {
+  font-size: 1.5em;
+  color: #f766ff;
+  opacity: 0.85;
+  font-style: italic;
+  transition: opacity 0.3s ease;
   
-  .productCard {
-    background-color: #f0f0ff;
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 8px;
-    width: 300px;
-    font-size: 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  button {
-    padding: 5px 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
+}
+
+.storeItem:hover strong {
+  color: #6200ff;
+}
+
+.storeItem:hover span {
+  opacity: 1;
+}
+.backButton {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #5d0192, #7873f5);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(138, 43, 226, 0.4);
+margin-left: -90%;
+}
+
+.backButton:hover {
+  background: linear-gradient(135deg, #7873f5, #ff6ec4);
+  box-shadow: 0 6px 20px rgba(138, 43, 226, 0.6);
+}

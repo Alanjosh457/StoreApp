@@ -95,10 +95,18 @@ export const fetchStores = async () => {
   };
   
   export const placeOrder = async (name, cartItems, totalAmount) => {
+    console.log('Sending order:', {
+      customerName: name,
+      items: cartItems,
+      totalAmount
+    });
+  
     const res = await fetch(`${BACKEND_URL}/api/user/orders`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ customerName: name, items: cartItems, totalAmount })
     });
+  
     return res.json();
   };
+  
